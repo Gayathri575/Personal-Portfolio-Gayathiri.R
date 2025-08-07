@@ -290,6 +290,64 @@
             animation: float 2s ease-in-out infinite;
         }
 
+        :root {
+            --primary: #007BFF;
+            --text: #333;
+            --background: #fdfdfd;
+            --accent: #ff6b81;
+        }
+
+        #resume {
+            background-color: var(--background);
+            padding: 80px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .resume-container {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            padding: 40px 60px;
+            max-width: 700px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .resume-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .resume-container h2 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .resume-container p {
+            color: var(--text);
+            font-size: 1rem;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .resume-button {
+            background-color: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 28px;
+            font-size: 1rem;
+            border-radius: 30px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 6px 16px rgba(255, 107, 129, 0.3);
+        }
+
+        .resume-button:hover {
+            background-color: #ff4757;
+            transform: scale(1.05);
+        }
+
         @keyframes float {
 
             0%,
@@ -703,6 +761,14 @@
                 hands-on experience in the IT industry</p>
         </div>
     </section>
+    <section id="resume">
+        <div class="resume-container">
+            <h2>Resume</h2>
+            <p>Download my updated resume to explore my experience, education, and skills in detail.</p>
+            <a href="Gayu.RResume.pdf" download class="resume-button">Download Resume</a>
+        </div>
+    </section>
+
 
     <section id="skills" class="section skills">
         <div class="container">
