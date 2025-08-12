@@ -711,16 +711,30 @@
 
 
 
-        @media (max-width: 768px) {
-            .intro-text h1 {
-                font-size: 2.2rem;
-                text-align: center;
-            }
+       @media (max-width: 600px) {
+  main {
+    padding: 2rem 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 
-            .intro-text p {
-                text-align: center;
-            }
-        }
+  .profile-img img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .resume-container {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .footer-content p {
+    font-size: 0.9rem;
+  }
+
+  .footer::before {
+    width: 40px;
+  }
+}
     </style>
 </head>
 
@@ -845,17 +859,6 @@
             </div>
 
             <div class="project-card">
-                <img src="project2.jpg" alt="Project 2">
-                <div class="project-info">
-                    <h3>Spotify-clone</h3>
-                    <p><strong>React.js and TailwindCss</strong><br>
-                        A basic front-end clone of the Spotify music streaming interface using React.js and
-                        TailwindCss.<br>
-                        The project replicates the homepage layout, music player UI, and navigation menu</p>
-                </div>
-            </div>
-
-            <div class="project-card">
                 <img src="jalapeno.png" alt="Project 3">
                 <div class="project-info">
                     <h3>Jalapeño</h3>
@@ -904,7 +907,13 @@
             <a href="mailto:gayathriii575@gmail.com" target="_blank" aria-label="Email">
                 <i class="fas fa-envelope"></i>
             </a>
+            <a href="https://leetcode.com/gayathri_R57" target="_blank" aria-label="LeetCode">
+    <i class="fab fa-leanpub"></i>
+</a>
         </div>
+        
+
+
 
         </div>
         </div>
