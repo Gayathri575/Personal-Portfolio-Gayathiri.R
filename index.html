@@ -39,38 +39,61 @@
             z-index: 10;
         }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-        }
+        /* Default nav styles */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
 
-        nav a {
-            text-decoration: none;
-            font-weight: 500;
-            color: var(--text);
-            position: relative;
-            transition: color 0.3s ease;
-        }
+nav a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--text);
+    position: relative;
+    transition: color 0.3s ease;
+}
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0%;
-            height: 2px;
-            background-color: var(--primary);
-            transition: width 0.3s;
-        }
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s;
+}
 
-        nav a:hover {
-            color: var(--primary);
-        }
+nav a:hover {
+    color: var(--primary);
+}
 
-        nav a:hover::after {
-            width: 100%;
-        }
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Tablet screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+    nav {
+        gap: 30px;
+    }
+}
+
+/* Mobile screens (max-width: 600px) */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: row;  /* stack links vertically */
+        gap: 15px;
+        align-items: row;    /* center links */
+    }
+
+    nav a {
+        font-size: 1rem;       /* slightly smaller font */
+    }
+}
+
 
         main {
             display: grid;
@@ -758,8 +781,10 @@
         <div class="intro-text">
             <h1>Gayathiri R</h1>
             <p>
-                A passionate <strong>Full Stack Developer</strong><br> and a Bachelor of Computer Application student.
-                I build modern, responsive websites and aim to create meaningful digital experiences.<br>
+             
+Heyyyy Hii, I'm <strong>Gayuuu</strong><br>
+An Entry-Level Java Developer building modern, responsive web applications.
+
             </p>
         </div>
         <div class="profile-img">
@@ -770,12 +795,22 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <p class="about-text">
-                I'm <strong>Gayathiri R</strong>, Passionate about creating responsive and user-friendly websites with a
-                keen eye for
-                design and functionality. Completed multiple academic projects and self-learning tasks in front-end and
-                back-end development. Quick learner, team player, and eager to apply skills in real-world projects and
-                gain
-                hands-on experience in the IT industry</p>
+               <div style="padding: 40px 20px; background-color: #fdfdfd; color: #333; font-family: Arial, sans-serif; max-width: 800px; margin: auto; border-radius: 10px;">
+  
+  <p style="font-size: 1rem; line-height: 1.6; color: #333;">
+    I am a passionate <strong style="color:#ff6b81;">Entry-Level Java Developer</strong> with a strong foundation in Java, Spring Boot, and JDBC.<br>
+    I enjoy creating efficient, responsive, and user-friendly web applications, and I am eager to apply my skills in real-world projects.
+  </p>
+
+  <h3 style="font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px; color: #6f4e37;">Education</h3>
+  <ul style="list-style-type: disc; padding-left: 20px; font-size: 1rem; line-height: 1.5; color: #333;">
+    <li><strong style="color:#007BFF;">MCA</strong> - Anna University (Distance Education)</li>
+    <li><strong style="color:#007BFF;">BCA</strong> - Dr. MGR Educational and Research Institute</li>
+    <li><strong style="color:#007BFF;">HSLC</strong> - Daniel Matriculation Higher Secondary School</li>
+  </ul>
+
+</div>
+            </p>
         </div>
     </section>
     <section id="resume">
@@ -819,7 +854,7 @@
     <!-- Project 1 -->
     <div class="project-card">
       <img src="portfolio.png" alt="Project 1">
-      <a href="https://personal-portfolio-gayathiri-r.vercel.app/" target="_blank" class="project-card">
+            <a href="https://personal-portfolio-gayathiri-r.vercel.app/" target="_blank" class="project-card"  style = "text-decoration: none;">
       <div class="project-info">
         <h3>Personal Portfolio</h3>
         <p><strong>HTML, CSS, JavaScript</strong></p>
@@ -849,7 +884,7 @@
 
     <!-- Project 3 -->
     <!-- Project 3 -->
-<a href="https://india-destination.vercel.app/" target="_blank" class="project-card">
+<a href="https://india-destination.vercel.app/" target="_blank" class="project-card" style = "text-decoration: none;">
   <img src="india-destinationplaces.png" alt="Project 3">
   <div class="project-info">
     <h3>India-TouristPlanner</h3>
@@ -862,7 +897,7 @@
 </a>
 
 <!-- Project 4 -->
-<a href="https://kaapikadhaigal.vercel.app/" target="_blank" class="project-card">
+<a href="https://kaapikadhaigal.vercel.app/" target="_blank" class="project-card"  style = "text-decoration: none;">
   <img src="kaapi.png" alt="Project 4">
   <div class="project-info">
     <h3>Kaapi-Kadhaigal</h3>
