@@ -372,56 +372,7 @@ nav a:hover::after {
             --accent: #ff6b81;
         }
 
-        #resume {
-            background-color: var(--background);
-            padding: 80px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .resume-container {
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            padding: 40px 60px;
-            max-width: 700px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .resume-container:hover {
-            transform: translateY(-5px);
-        }
-
-        .resume-container h2 {
-            color: var(--primary);
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-        }
-
-        .resume-container p {
-            color: var(--text);
-            font-size: 1rem;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-
-        .resume-button {
-            background-color: var(--accent);
-            color: #fff;
-            text-decoration: none;
-            padding: 12px 28px;
-            font-size: 1rem;
-            border-radius: 30px;
-            transition: background 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 6px 16px rgba(255, 107, 129, 0.3);
-        }
-
-        .resume-button:hover {
-            background-color: #ff4757;
-            transform: scale(1.05);
-        }
+        
 
         @keyframes float {
 
@@ -529,6 +480,7 @@ nav a:hover::after {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
+                        padding-top: 30px;
         }
 
         .project-card {
@@ -579,7 +531,7 @@ nav a:hover::after {
 
         .project-info h3 {
             font-size: 1.4rem;
-            margin-bottom: 10px;
+            margin-bottom: 60px;
             color: var(--primary);
         }
 
@@ -587,6 +539,20 @@ nav a:hover::after {
             font-size: 1rem;
             color: #555;
         }
+        /* Tablet: 2 columns */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: 3 columns in 1 row */
+@media (max-width: 576px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem; /* optional: reduce gap for small screens */
+    }
+}
 
         .contact-section {
             padding: 80px 20px;
@@ -758,6 +724,20 @@ nav a:hover::after {
             color: #222;
             margin-bottom: 20px;
         }
+        /* Mobile: 2 columns for certificates */
+@media (max-width: 576px) {
+    .certificate-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px; /* adjust gap if needed */
+        justify-items: center;
+    }
+
+    .certificate-item {
+        width: 100%; /* let grid control width */
+    }
+}
+
 
         .btn {
             display: inline-block;
@@ -900,7 +880,7 @@ nav a:hover::after {
             <a href="#Home">Home</a>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
-            <a href="#social-links">Connect</a>
+            <a href="#contact">Connect</a>
         </nav>
     </header>
 
@@ -978,13 +958,22 @@ From Chennai , An Entry-Level Java Developer building modern, responsive web app
   </div>
 </div>
 </section>
-    <section id="resume">
-        <div class="resume-container">
-            <h2>Resume</h2>
-            <p>Download my updated resume to explore my experience, education, and skills in detail.</p>
-            <a href="GAYU.R.pdf" download class="resume-button">Download Resume</a>
-        </div>
-    </section>
+    <section id="resume" style="padding: 40px 20px; text-align: center; font-family: Arial, sans-serif;">
+                            <h2 class="section-title">Resume</h2>
+
+    <p style="font-size: 1.1rem; color: #333; margin-bottom: 30px;">
+Discover my skills and experience — click below to view my resume.    </p>
+
+    <a href="GAYU.R.pdf" target="_blank" 
+       style="padding: 12px 25px; background-color: #ff6b81; color: #fff; border-radius: 8px; 
+              text-decoration: none; font-weight: bold; transition: background 0.3s, transform 0.3s;"
+       onmouseover="this.style.backgroundColor='#e0556e'; this.style.transform='scale(1.05)';"
+       onmouseout="this.style.backgroundColor='#ff6b81'; this.style.transform='scale(1)';">
+        Click to View My Resume
+    </a>
+</section>
+
+
 
 
 <section id="skills">
@@ -1023,10 +1012,9 @@ From Chennai , An Entry-Level Java Developer building modern, responsive web app
       <img src="jalapeno.png" alt="Project 2">
       <div class="project-info">
         <h3>Jalapeño</h3>
-        <p><strong>Tech Stack: React.js, Node.js, MongoDB, Express.js, Stripe API</strong></p>
+        <p><strong>Tech Stack:MERN Stack , Stripe Api</strong></p>
         <p>
-          Recipe Book Module – Empowers women by showcasing their home-cooked recipes, allowing them
-          to publish, share, and gain recognition for their culinary skills.<br>
+          Recipe Book Module – Empowers women by showcasing their home-cooked recipes<br>
           Leftover Food Redistribution – Connects Canteen/restaurants with NGOs to donate excess food,
           reducing waste and helping the needy.
         </p>
