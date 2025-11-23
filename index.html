@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gayathiri R | Full Stack Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
     <style>
         /* Base Reset */
@@ -359,58 +360,61 @@
                 transform: translateY(-5px);
             }
         }
+        
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns desktop */
+    gap: 12px;
+    justify-items: center; /* center badges */
+    padding: 20px;
+}
+
+.skill-tag {
+    padding: 12px 18px; /* smaller, uniform */
+    font-size: 14px;
+    border-radius: 20px;
+    background: white;
+    color: black;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+}
+
+.skill-tag:hover {
+    transform: scale(1.07);
+}
+
+.skill-tag i {
+    font-size: 18px;
+}
+
+.skills-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--primary);
+}
+
+/* Tablet: 3 columns */
+@media (max-width: 992px) {
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 576px) {
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 
         /* Skills Section */
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .skill {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-            transition: transform 0.3s;
-        }
-
-        .skill:hover {
-            transform: translateY(-5px);
-        }
-
-        .skill span {
-            font-weight: 600;
-            color: #222;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .bar {
-            height: 10px;
-            background: #e0e0e0;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .fill {
-            height: 100%;
-            background: linear-gradient(to right, var(--primary), var(--accent));
-            border-radius: 5px;
-            width: 0;
-            animation: fillBar 1.5s ease forwards;
-        }
-
-        @keyframes fillBar {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: var(--width);
-            }
-        }
 
         #projects {
             padding: 60px 20px;
@@ -783,67 +787,28 @@
     </section>
 
 
-    <section id="skills" class="section skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill">
-                    <span>HTML5</span>
-                    <div class="bar">
-                        <div class="fill" style="width: 95%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>CSS3</span>
-                    <div class="bar">
-                        <div class="fill" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>Tailwind CSS</span>
-                    <div class="bar">
-                        <div class="fill" style="width: 95%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>JavaScript</span>
-                    <div class="bar">
-                        <div class="fill" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>JDBC</span>
-                    <div class="bar">
-                        <div class="fill" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>React.js</span>
-                    <div class="bar">
-                        <div class="fill" style="width: 75%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>Node.js</span>
-                    <div class="bar">
-                        <div class="fill" style="width: 70%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>MYSql</span>
-                    <div class="bar">
-                        <div class="fill" style="width: 70%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>Java</span>
-                    <div class="bar">
-                        <div class="fill" style="width: 50%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="skills">
+    <h1 class="skills-title">Tech - Skills</h1>
+
+    <div class="skills-container">
+        <span class="skill-tag"><i class="devicon-html5-plain colored"></i> HTML</span>
+        <span class="skill-tag"><i class="devicon-css3-plain colored"></i> CSS</span>
+        <span class="skill-tag"><i class="devicon-tailwindcss-original colored"></i> Tailwind</span>
+        <span class="skill-tag"><i class="devicon-react-original colored"></i> React.js</span>
+
+        <span class="skill-tag"><i class="devicon-java-plain colored"></i> Java</span>
+        <span class="skill-tag"><i class="devicon-spring-plain colored"></i> Spring Boot</span>
+        <span class="skill-tag"><i class="devicon-nodejs-plain colored"></i> REST APIs</span>
+        <span class="skill-tag"><i class="devicon-java-plain colored"></i> JDBC</span>
+
+        <span class="skill-tag"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+        <span class="skill-tag"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+        <span class="skill-tag"><i class="devicon-git-plain colored"></i> Git</span>
+        <span class="skill-tag"><i class="devicon-github-original"></i> GitHub</span>
+
+    </div>
+</section>
+
     <section id="projects">
   <div class="section-title">
     <h2>Projects</h2>
@@ -854,6 +819,7 @@
     <!-- Project 1 -->
     <div class="project-card">
       <img src="portfolio.png" alt="Project 1">
+      <a href="https://personal-portfolio-gayathiri-r.vercel.app/" target="_blank" class="project-card">
       <div class="project-info">
         <h3>Personal Portfolio</h3>
         <p><strong>HTML, CSS, JavaScript</strong></p>
@@ -882,33 +848,32 @@
     </div>
 
     <!-- Project 3 -->
-    <div class="project-card">
-      <img src="india-destinationplaces.png" alt="Project 3">
-      <div class="project-info">
-        <h3>India-TouristPlanner</h3>
-        <p><strong>Tech Stack: HTML, CSS, JavaScript</strong></p>
-        <p>
-          A responsive and interactive tourism planner website built using HTML, CSS, and JavaScript.<br>
-          It helps users explore top destinations in India with descriptions, images, and booking options.
-        </p>
-      </div>
-    </div>
-
-    <!-- Project 4 -->
-    <div class="project-card">
-      <img src="kaapi.png" alt="Project 4">
-      <div class="project-info">
-        <h3>Kaapi-Kadhaigal</h3>
-        <p><strong>Tech Stack: HTML, CSS</strong></p>
-        <p>
-          A responsive and interactive website built using HTML and CSS. It showcases a collection of layout
-          designs for a coffee shop, with a focus on user experience and visual appeal.
-        </p>
-      </div>
-    </div>
+    <!-- Project 3 -->
+<a href="https://india-destination.vercel.app/" target="_blank" class="project-card">
+  <img src="india-destinationplaces.png" alt="Project 3">
+  <div class="project-info">
+    <h3>India-TouristPlanner</h3>
+    <p><strong>Tech Stack: HTML, CSS, JavaScript</strong></p>
+    <p>
+      A responsive and interactive tourism planner website built using HTML, CSS, and JavaScript.<br>
+      It helps users explore top destinations in India with descriptions, images, and booking options.
+    </p>
   </div>
-</section>
+</a>
 
+<!-- Project 4 -->
+<a href="https://kaapikadhaigal.vercel.app/" target="_blank" class="project-card">
+  <img src="kaapi.png" alt="Project 4">
+  <div class="project-info">
+    <h3>Kaapi-Kadhaigal</h3>
+    <p><strong>Tech Stack: HTML, CSS</strong></p>
+    <p>
+      A responsive and interactive website built using HTML and CSS. It showcases a collection of layout
+      designs for a coffee shop, with a focus on user experience and visual appeal.
+    </p>
+  </div>
+</a>
+    </div>
 
     <section id="certificates">
         <h2>Certificates</h2>
