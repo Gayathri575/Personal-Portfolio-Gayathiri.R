@@ -40,6 +40,7 @@
         }
 
         /* Default nav styles */
+/* Base nav styles */
 nav {
     display: flex;
     justify-content: center;
@@ -74,6 +75,27 @@ nav a:hover::after {
     width: 100%;
 }
 
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    nav {
+        gap: 25px;
+    }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /* stack links vertically */
+        gap: 15px; /* smaller spacing */
+        align-items: center; /* center align links */
+    }
+
+    nav a {
+        font-size: 1rem; /* adjust font size for smaller screens */
+    }
+}
+
+
 /* Tablet screens (max-width: 1024px) */
 @media (max-width: 1024px) {
     nav {
@@ -85,8 +107,8 @@ nav a:hover::after {
 @media (max-width: 600px) {
     nav {
         flex-direction: row;  /* stack links vertically */
-        gap: 8px;
-        align-items: row;    /* center links */
+        gap: 15px;
+        align-items: center;    /* center links */
     }
 
     nav a {
