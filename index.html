@@ -85,7 +85,7 @@ nav a:hover::after {
 @media (max-width: 600px) {
     nav {
         flex-direction: row;  /* stack links vertically */
-        gap: 15px;
+        gap: 8px;
         align-items: row;    /* center links */
     }
 
@@ -220,47 +220,77 @@ nav a:hover::after {
 
         /* Profile Image Styling */
         .profile-img {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            perspective: 1000px;
-            /* subtle 3D feel */
-        }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    perspective: 1000px;
+}
 
-        .profile-img img {
-            width: 260px;
-            height: 260px;
-            border-radius: 20px;
-            object-fit: cover;
-            border: 6px solid var(--primary);
-            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            transform-style: preserve-3d;
-            background-color: white;
-            position: relative;
-            z-index: 1;
-        }
+/* Main Image */
+.profile-img img {
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 6px solid var(--primary);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
 
-        .profile-img img:hover {
-            transform: rotateY(8deg) scale(1.06);
-            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
-        }
+.profile-img img:hover {
+    transform: rotateY(8deg) scale(1.06);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+}
 
-        .profile-img::before {
-            content: '';
-            position: absolute;
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(0, 123, 255, 0.15), transparent 60%);
-            z-index: 0;
-            transition: transform 0.4s ease;
-        }
+/* Subtle Gradient Circle */
+.profile-img::before {
+    content: '';
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.15), transparent 60%);
+    z-index: 0;
+    transition: transform 0.4s ease;
+}
 
-        .profile-img:hover::before {
-            transform: scale(1.1);
-        }
+.profile-img:hover::before {
+    transform: scale(1.1);
+}
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .profile-img img {
+        width: 250px;
+        height: 250px;
+        border-width: 4px;
+    }
+
+    .profile-img::before {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+    .profile-img img {
+        width: 180px;
+        height: 180px;
+        border-width: 3px;
+    }
+
+    .profile-img::before {
+        width: 150px;
+        height: 150px;
+    }
+}
+
 
         .section {
             padding: 80px 20px;
