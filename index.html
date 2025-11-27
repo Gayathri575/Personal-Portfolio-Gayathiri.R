@@ -1064,10 +1064,9 @@ Discover my skills and experience — click below to view my resume.    </p>
 
     </div>
 </section>
-
 <section id="projects" style="padding: 40px; background: #f9f9f9;">
   <div style="text-align: center; margin-bottom: 40px;">
-    <h2 style="font-size: 2rem;">Projects</h2>
+                    <h2 class="section-title">Projects</h2>
     <p>Here are some of the projects I’ve worked on recently.</p>
   </div>
 
@@ -1103,6 +1102,8 @@ Discover my skills and experience — click below to view my resume.    </p>
       <!-- Project 3 -->
       <div class="project-card" style="min-width: 300px; margin: 0 10px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
         <img src="SMS.png" alt="Project 3" style="width: 100%; border-radius: 10px 10px 0 0;">
+              <a href="https://github.com/Gayathri575/DSA_JAVA/blob/main/src/MiniProject/StudentManagementSystem.jav" target="_blank" class="project-card" style="min-width: 300px; margin: 0 10px; background: white; text-decoration: none; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+
         <div style="padding: 15px;">
           <h3>Student Management System</h3>
           <p><strong>  Tech Stack: Java, OOP, ArrayList</strong></p>
@@ -1110,6 +1111,7 @@ Discover my skills and experience — click below to view my resume.    </p>
 A console-based mini project that allows users to store and view student details (Name, Roll No, Phone Number). Implemented using OOP principles, ArrayList for data storage, and scanner for user input.
           </p>
         </div>
+                </a>
       </div>
 
       <!-- Project 4 -->
@@ -1136,16 +1138,40 @@ A console-based mini project that allows users to store and view student details
 let index = 0;
 const carousel = document.getElementById('carousel');
 const cards = document.querySelectorAll('.project-card');
-const cardWidth = cards[0].offsetWidth + 20; // width + margin
+
+// Dynamically calculate card width (includes margin)
+function getCardWidth() {
+  return cards[0].offsetWidth + 20; 
+}
+
+// Dynamically calculate how many cards visible per screen
+function getVisibleCards() {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth <= 480) return 1;      // mobile
+  if (screenWidth <= 768) return 2;      // small tablet
+  if (screenWidth <= 1024) return 3;     // tablet
+  return 3;                              // laptop/desktop
+}
 
 function slide(direction) {
   index += direction;
-  if(index < 0) index = 0;
-  if(index > cards.length - 3) index = cards.length - 3; // show 3 cards max
-  carousel.style.transform = `translateX(${-index * cardWidth}px)`;
-}
-</script>
 
+  const visible = getVisibleCards();
+  const maxIndex = cards.length - visible;
+
+  if (index < 0) index = 0;
+  if (index > maxIndex) index = maxIndex;
+
+  carousel.style.transform = `translateX(${-index * getCardWidth()}px)`;
+}
+
+// Recalculate on screen resize
+window.addEventListener("resize", () => {
+  index = 0;
+  carousel.style.transform = "translateX(0px)";
+});
+</script>
 
     <section id="certificates">
                             <h2 class="section-title">Certificates</h2>
