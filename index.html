@@ -1065,57 +1065,87 @@ Discover my skills and experience — click below to view my resume.    </p>
     </div>
 </section>
 
-
-    <section id="projects">
-  <div class="section-title">
-                        <h2 class="section-title">Projects</h2>
+<section id="projects" style="padding: 40px; background: #f9f9f9;">
+  <div style="text-align: center; margin-bottom: 40px;">
+    <h2 style="font-size: 2rem;">Projects</h2>
     <p>Here are some of the projects I’ve worked on recently.</p>
   </div>
 
-  <div class="projects-grid">
-    <!-- Project 1 -->
-    
-    <!-- Project 2 -->
-    <div class="project-card">
-      <img src="jalapeno.png" alt="Project 2">
-      <div class="project-info">
-        <h3>Jalapeño</h3>
-        <p><strong>Tech Stack:MERN Stack , Stripe Api</strong></p>
-        <p>
-          Recipe Book Module – Empowers women by showcasing their home-cooked recipes<br>
-          Leftover Food Redistribution – Connects Canteen/restaurants with NGOs to donate excess food,
-          reducing waste and helping the needy.
-        </p>
+  <div style="position: relative; overflow: hidden; max-width: 900px; margin: auto;">
+    <!-- Carousel Wrapper -->
+    <div id="carousel" style="display: flex; transition: transform 0.5s ease;">
+      <!-- Project 1 -->
+      <div class="project-card" style="min-width: 300px; margin: 0 10px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <img src="jalapeno.png" alt="Project 1" style="width: 100%; border-radius: 10px 10px 0 0;">
+        <div style="padding: 15px;">
+          <h3>Jalapeño</h3>
+          <p><strong>Tech Stack: MERN Stack, Stripe Api</strong></p>
+          <p>
+            Recipe Book Module – Empowers women by showcasing their home-cooked recipes.<br>
+            Leftover Food Redistribution – Connects Canteen/restaurants with NGOs to donate excess food, reducing waste and helping the needy.
+          </p>
+        </div>
       </div>
+
+      <!-- Project 2 -->
+      <a href="https://india-destination.vercel.app/" target="_blank" class="project-card" style="min-width: 300px; margin: 0 10px; background: white; text-decoration: none; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <img src="india-destinationplaces.png" alt="Project 2" style="width: 100%; border-radius: 10px 10px 0 0;">
+        <div style="padding: 15px; color: black;">
+          <h3>India-TouristPlanner</h3>
+          <p><strong>Tech Stack: HTML, CSS, JavaScript</strong></p>
+          <p>
+            A responsive and interactive tourism planner website built using HTML, CSS, and JavaScript.<br>
+            It helps users explore top destinations in India with descriptions, images, and booking options.
+          </p>
+        </div>
+      </a>
+
+      <!-- Project 3 -->
+      <div class="project-card" style="min-width: 300px; margin: 0 10px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <img src="SMS.png" alt="Project 3" style="width: 100%; border-radius: 10px 10px 0 0;">
+        <div style="padding: 15px;">
+          <h3>Student Management System</h3>
+          <p><strong>  Tech Stack: Java, OOP, ArrayList</strong></p>
+          <p>
+A console-based mini project that allows users to store and view student details (Name, Roll No, Phone Number). Implemented using OOP principles, ArrayList for data storage, and scanner for user input.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <a href="https://kaapikadhaigal.vercel.app/" target="_blank" class="project-card" style="min-width: 300px; margin: 0 10px; background: white; text-decoration: none; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <img src="kaapi.png" alt="Project 4" style="width: 100%; border-radius: 10px 10px 0 0;">
+        <div style="padding: 15px; color: black;">
+          <h3>Kaapi-Kadhaigal</h3>
+          <p><strong>Tech Stack: HTML, CSS</strong></p>
+          <p>
+            A responsive and interactive website built using HTML and CSS. It showcases a collection of layout
+            designs for a coffee shop, with a focus on user experience and visual appeal.
+          </p>
+        </div>
+      </a>
     </div>
 
-    <!-- Project 3 -->
-    <!-- Project 3 -->
-<a href="https://india-destination.vercel.app/" target="_blank" class="project-card" style = "text-decoration: none;">
-  <img src="india-destinationplaces.png" alt="Project 3">
-  <div class="project-info">
-    <h3>India-TouristPlanner</h3>
-    <p><strong>Tech Stack: HTML, CSS, JavaScript</strong></p>
-    <p>
-      A responsive and interactive tourism planner website built using HTML, CSS, and JavaScript.<br>
-      It helps users explore top destinations in India with descriptions, images, and booking options.
-    </p>
+    <!-- Left & Right Arrows -->
+    <button onclick="slide(-1)" style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer;">&#10094;</button>
+    <button onclick="slide(1)" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer;">&#10095;</button>
   </div>
-</a>
+</section>
 
-<!-- Project 4 -->
-<a href="https://kaapikadhaigal.vercel.app/" target="_blank" class="project-card"  style = "text-decoration: none;">
-  <img src="kaapi.png" alt="Project 4">
-  <div class="project-info">
-    <h3>Kaapi-Kadhaigal</h3>
-    <p><strong>Tech Stack: HTML, CSS</strong></p>
-    <p>
-      A responsive and interactive website built using HTML and CSS. It showcases a collection of layout
-      designs for a coffee shop, with a focus on user experience and visual appeal.
-    </p>
-  </div>
-</a>
-    </div>
+<script>
+let index = 0;
+const carousel = document.getElementById('carousel');
+const cards = document.querySelectorAll('.project-card');
+const cardWidth = cards[0].offsetWidth + 20; // width + margin
+
+function slide(direction) {
+  index += direction;
+  if(index < 0) index = 0;
+  if(index > cards.length - 3) index = cards.length - 3; // show 3 cards max
+  carousel.style.transform = `translateX(${-index * cardWidth}px)`;
+}
+</script>
+
 
     <section id="certificates">
                             <h2 class="section-title">Certificates</h2>
@@ -1127,7 +1157,15 @@ Discover my skills and experience — click below to view my resume.    </p>
             </div>
             <div class="certificate-item">
                 <h3>Responsive Web Design (freeCodeCamp)</h3>
-                <a href="Profile-freeCodeCamp.org.pdf" target="_blank" class="btn">View Certificate</a>
+                <a href="Responsive_freeCodecamp.pdf" target="_blank" class="btn">View Certificate</a>
+            </div>
+            <div class="certificate-item">
+                <h3>Java Backend  <br> ( Geeks for Geeks )</h3>
+                <a href="java-Backend-bootcamp.pdf" target="_blank" class="btn">View Certificate</a>
+            </div>
+            <div class="certificate-item">
+                <h3>Data Structures And Algorithms <br> ( Geeks for Geeks )</h3>
+                <a href="DSA_Bootcamp.pdf" target="_blank" class="btn">View Certificate</a>
             </div>
         </div>
     </section>
