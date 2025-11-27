@@ -6,30 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gayathiri R | Full Stack Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <style>
         /* Base Reset */
-       
 
-h1 {
-    font-size: 1.25rem; /* 24px */
-}
-h2 {
-    font-size: 1rem; /* 20px */
-}
 
-p {
-    font-size: 0.8rem; /* 13px */
-}
+        h1 {
+            font-size: 1.25rem;
+            /* 24px */
+        }
+
+        h2 {
+            font-size: 1rem;
+            /* 20px */
+        }
+
+        p {
+            font-size: 0.8rem;
+            /* 13px */
+        }
 
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
 
 
         :root {
@@ -38,13 +43,14 @@ p {
             --background: #fdfdfd;
             --accent: #ff6b81;
         }
-       
+
 
         body {
             background-color: var(--background);
             color: var(--text);
             line-height: 1.6;
-                font-size: 1rem; /* 16px */
+            font-size: 1rem;
+            /* 16px */
 
         }
 
@@ -58,152 +64,161 @@ p {
         }
 
         /* Default nav styles */
-/* Base nav styles */
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap; /* allows wrapping on smaller screens */
-}
+        /* Base nav styles */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            /* allows wrapping on smaller screens */
+        }
 
-nav a {
-    text-decoration: none;
-    font-weight: 500;
-    color: var(--text);
-    position: relative;
-    transition: color 0.3s ease;
-}
+        nav a {
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--text);
+            position: relative;
+            transition: color 0.3s ease;
+        }
 
-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background-color: var(--primary);
-    transition: width 0.3s;
-}
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
 
-nav a:hover {
-    color: var(--primary);
-}
+        nav a:hover {
+            color: var(--primary);
+        }
 
-nav a:hover::after {
-    width: 100%;
-}
+        nav a:hover::after {
+            width: 100%;
+        }
 
-/* Tablets (max-width: 1024px) */
-@media (max-width: 1024px) {
-    nav {
-        gap: 25px;
-    }
-}
+        /* Tablets (max-width: 1024px) */
+        @media (max-width: 1024px) {
+            nav {
+                gap: 25px;
+            }
+        }
 
-/* Mobile (max-width: 600px) */
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column; /* stack links vertically */
-        gap: 15px; /* smaller spacing */
-        align-items: center; /* center align links */
-    }
+        /* Mobile (max-width: 600px) */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                /* stack links vertically */
+                gap: 15px;
+                /* smaller spacing */
+                align-items: center;
+                /* center align links */
+            }
 
-    nav a {
-        font-size: 1rem; /* adjust font size for smaller screens */
-    }
-}
+            nav a {
+                font-size: 1rem;
+                /* adjust font size for smaller screens */
+            }
+        }
 
 
-/* Tablet screens (max-width: 1024px) */
-@media (max-width: 1024px) {
-    nav {
-        gap: 30px;
-    }
-}
+        /* Tablet screens (max-width: 1024px) */
+        @media (max-width: 1024px) {
+            nav {
+                gap: 30px;
+            }
+        }
 
-/* Mobile screens (max-width: 600px) */
-@media (max-width: 600px) {
-    nav {
-        flex-direction: row;  /* stack links vertically */
-        gap: 15px;
-        align-items: center;    /* center links */
-    }
+        /* Mobile screens (max-width: 600px) */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: row;
+                /* stack links vertically */
+                gap: 15px;
+                align-items: center;
+                /* center links */
+            }
 
-    nav a {
-        font-size: 1rem;       /* slightly smaller font */
-    }
-}
-.profile-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    perspective: 1000px;
-}
+            nav a {
+                font-size: 1rem;
+                /* slightly smaller font */
+            }
+        }
 
-/* Main Image */
-.profile-img img {
-    width: 350px;
-    height: 350px;
-    border-radius: 20px;
-    object-fit: cover;
-    border: 6px solid var(--primary);
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    transform-style: preserve-3d;
-    background-color: white;
-    position: relative;
-    z-index: 1;
-}
+        .profile-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            perspective: 1000px;
+        }
 
-.profile-img img:hover {
-    transform: rotateY(8deg) scale(1.06);
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
-}
+        /* Main Image */
+        .profile-img img {
+            width: 350px;
+            height: 350px;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 6px solid var(--primary);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            transform-style: preserve-3d;
+            background-color: white;
+            position: relative;
+            z-index: 1;
+        }
 
-/* Subtle Gradient Circle */
-.profile-img::before {
-    content: '';
-    position: absolute;
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 123, 255, 0.15), transparent 60%);
-    z-index: 0;
-    transition: transform 0.4s ease;
-}
+        .profile-img img:hover {
+            transform: rotateY(8deg) scale(1.06);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+        }
 
-.profile-img:hover::before {
-    transform: scale(1.1);
-}
+        /* Subtle Gradient Circle */
+        .profile-img::before {
+            content: '';
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 123, 255, 0.15), transparent 60%);
+            z-index: 0;
+            transition: transform 0.4s ease;
+        }
 
-/* Tablets (max-width: 1024px) */
-@media (max-width: 1024px) {
-    .profile-img img {
-        width: 250px;
-        height: 250px;
-        border-width: 4px;
-    }
+        .profile-img:hover::before {
+            transform: scale(1.1);
+        }
 
-    .profile-img::before {
-        width: 200px;
-        height: 200px;
-    }
-}
+        /* Tablets (max-width: 1024px) */
+        @media (max-width: 1024px) {
+            .profile-img img {
+                width: 250px;
+                height: 250px;
+                border-width: 4px;
+            }
 
-/* Mobile (max-width: 600px) */
-@media (max-width: 600px) {
-    .profile-img img {
-        width: 180px;
-        height: 180px;
-        border-width: 3px;
-    }
+            .profile-img::before {
+                width: 200px;
+                height: 200px;
+            }
+        }
 
-    .profile-img::before {
-        width: 150px;
-        height: 150px;
-    }
-}
+        /* Mobile (max-width: 600px) */
+        @media (max-width: 600px) {
+            .profile-img img {
+                width: 180px;
+                height: 180px;
+                border-width: 3px;
+            }
+
+            .profile-img::before {
+                width: 150px;
+                height: 150px;
+            }
+        }
 
 
 
@@ -331,7 +346,7 @@ nav a:hover::after {
         }
 
         /* Profile Image Styling */
-           .section {
+        .section {
             padding: 80px 20px;
             background-color: #fdfdfd;
             position: relative;
@@ -374,58 +389,63 @@ nav a:hover::after {
             line-height: 1.8;
             position: relative;
         }
-        
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 columns desktop */
-    gap: 12px;
-    justify-items: center; /* center badges */
-    padding: 20px;
-}
 
-.skill-tag {
-    padding: 12px 18px; /* smaller, uniform */
-    font-size: 14px;
-    border-radius: 20px;
-    background: white;
-    color: black;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s;
-}
 
-.skill-tag:hover {
-    transform: scale(1.07);
-}
 
-.skill-tag i {
-    font-size: 18px;
-}
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            /* 6 columns desktop */
+            gap: 12px;
+            justify-items: center;
+            /* center badges */
+            padding: 20px;
+        }
 
-.skills-title {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 25px;
-    color: var(--primary);
-}
+        .skill-tag {
+            padding: 12px 18px;
+            /* smaller, uniform */
+            font-size: 14px;
+            border-radius: 20px;
+            background: white;
+            color: black;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s;
+        }
 
-/* Tablet: 3 columns */
-@media (max-width: 992px) {
-    .skills-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+        .skill-tag:hover {
+            transform: scale(1.07);
+        }
 
-/* Mobile: 1 column */
-@media (max-width: 576px) {
-    .skills-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+        .skill-tag i {
+            font-size: 18px;
+        }
+
+        .skills-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--primary);
+        }
+
+        /* Tablet: 3 columns */
+        @media (max-width: 992px) {
+            .skills-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Mobile: 1 column */
+        @media (max-width: 576px) {
+            .skills-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
 
 
         /* Skills Section */
@@ -466,119 +486,130 @@ nav a:hover::after {
         }
 
         .projects-grid {
-                        background-color: var(--background);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding-top: 30px;
-}
+            background-color: var(--background);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding-top: 30px;
+        }
 
-/* Project card styling */
-.project-card {
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    position: relative;
-}
-.project-card, 
-.project-card a {
-  color: #007bff;           /* Normal text color */
-  text-decoration: none;     /* Remove underline */
-  transition: color 0.3s;    /* Smooth hover effect */
-}
+        /* Project card styling */
+        .project-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
 
-.project-card:hover, 
-.project-card a:hover {
-  color: #ff6b81;           /* Hover color */
-}
+        .project-card,
+        .project-card a {
+            color: #007bff;
+            /* Normal text color */
+            text-decoration: none;
+            /* Remove underline */
+            transition: color 0.3s;
+            /* Smooth hover effect */
+        }
 
-.project-card::before {
-    content: '';
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--accent);
-    opacity: 0.1;
-    transform: skewY(-5deg);
-    transition: top 0.5s ease;
-    z-index: 0;
-}
+        .project-card:hover,
+        .project-card a:hover {
+            color: #ff6b81;
+            /* Hover color */
+        }
 
-.project-card:hover::before {
-    top: 0;
-}
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--accent);
+            opacity: 0.1;
+            transform: skewY(-5deg);
+            transition: top 0.5s ease;
+            z-index: 0;
+        }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
+        .project-card:hover::before {
+            top: 0;
+        }
 
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
 
-/* Project info */
-.project-info {
-    padding: 20px;
-    position: relative;
-    z-index: 1;
-}
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
 
-.project-info h3 {
-    font-size: 1.4rem;
-    margin-bottom: 60px;
-    color: var(--primary);
-}
+        /* Project info */
+        .project-info {
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
 
-.project-info p {
-    font-size: 1rem;
-    color: #555;
-}
+        .project-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 60px;
+            color: var(--primary);
+        }
 
-/* ===== Responsive adjustments ===== */
+        .project-info p {
+            font-size: 1rem;
+            color: #555;
+        }
 
-/* Tablets */
-@media (max-width: 768px) {
-    .project-card img {
-        height: 180px;
-    }
-    .project-info h3 {
-        font-size: 1.2rem;
-        margin-bottom: 40px;
-    }
-    .project-info p {
-        font-size: 0.95rem;
-    }
-}
+        /* ===== Responsive adjustments ===== */
 
-/* Small devices (mobile) */
-@media (max-width: 480px) {
-    .projects-grid {
-        gap: 1.5rem;
-        padding-top: 20px;
-    }
-    .project-card img {
-        height: 150px;
-    }
-    .project-info h3 {
-        font-size: 1.1rem;
-        margin-bottom: 30px;
-    }
-    .project-info p {
-        font-size: 0.9rem;
-    }
-    .project-info {
-        padding: 15px;
-    }
-}
+        /* Tablets */
+        @media (max-width: 768px) {
+            .project-card img {
+                height: 180px;
+            }
+
+            .project-info h3 {
+                font-size: 1.2rem;
+                margin-bottom: 40px;
+            }
+
+            .project-info p {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Small devices (mobile) */
+        @media (max-width: 480px) {
+            .projects-grid {
+                gap: 1.5rem;
+                padding-top: 20px;
+            }
+
+            .project-card img {
+                height: 150px;
+            }
+
+            .project-info h3 {
+                font-size: 1.1rem;
+                margin-bottom: 30px;
+            }
+
+            .project-info p {
+                font-size: 0.9rem;
+            }
+
+            .project-info {
+                padding: 15px;
+            }
+        }
 
 
         .contact-section {
@@ -699,119 +730,123 @@ nav a:hover::after {
             color: var(--accent, #38bdf8);
             transition: color 0.3s ease-in-out;
         }
+
         #certificates {
-  background-color: #f9f9f9;
-  padding: 60px 20px;
-  text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+            background-color: #f9f9f9;
+            padding: 60px 20px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-#certificates h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
-  color: #333;
-}
+        #certificates h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #333;
+        }
 
-.certificate-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  perspective: 1000px;
-}
+        .certificate-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            perspective: 1000px;
+        }
 
-/* Flip Card Container */
-.cert-card {
-  width: 260px;
-  height: 180px;
-  position: relative;
-  perspective: 1000px;
-  transition: transform 0.3s ease;
-}
+        /* Flip Card Container */
+        .cert-card {
+            width: 260px;
+            height: 180px;
+            position: relative;
+            perspective: 1000px;
+            transition: transform 0.3s ease;
+        }
 
-/* Slight overlap stagger */
-.cert-card:nth-child(2) {
-  margin-top: 20px;
-}
-.cert-card:nth-child(3) {
-  margin-top: -20px;
-}
-.cert-card:nth-child(4) {
-  margin-top: 10px;
-}
+        /* Slight overlap stagger */
+        .cert-card:nth-child(2) {
+            margin-top: 20px;
+        }
 
-.cert-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
+        .cert-card:nth-child(3) {
+            margin-top: -20px;
+        }
 
-.cert-card:hover .cert-inner {
-  transform: rotateY(180deg);
-}
+        .cert-card:nth-child(4) {
+            margin-top: 10px;
+        }
 
-/* Front & Back Styles */
-.cert-front, .cert-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 25px;
-  border-radius: 12px;
-  backface-visibility: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+        .cert-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
 
-/* Front Design */
-.cert-front {
-  background: #fff;
-  font-size: 20px;
-  color: #007bff;
-  font-weight: 600;
-}
+        .cert-card:hover .cert-inner {
+            transform: rotateY(180deg);
+        }
 
-/* Back Design */
-.cert-back {
-  color: #fff;
-  transform: rotateY(180deg);
-}
+        /* Front & Back Styles */
+        .cert-front,
+        .cert-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 25px;
+            border-radius: 12px;
+            backface-visibility: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
 
-/* Button */
-.btn {
-  margin-top: 10px;
-  display: inline-block;
-  padding: 10px 18px;
-  background-color: #ff6b81;
-  color: #fff;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s ease;
-}
+        /* Front Design */
+        .cert-front {
+            background: #fff;
+            font-size: 20px;
+            color: #007bff;
+            font-weight: 600;
+        }
 
-.btn:hover {
-  background: #ff3b5f;
-  transform: scale(1.05);
-}
+        /* Back Design */
+        .cert-back {
+            color: #fff;
+            transform: rotateY(180deg);
+        }
 
-/* Mobile layout */
-@media (max-width: 576px) {
-  .certificate-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
+        /* Button */
+        .btn {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 10px 18px;
+            background-color: #ff6b81;
+            color: #fff;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
 
-  .cert-card {
-    width: 100%;
-    height: 160px;
-  }
-}
+        .btn:hover {
+            background: #ff3b5f;
+            transform: scale(1.05);
+        }
+
+        /* Mobile layout */
+        @media (max-width: 576px) {
+            .certificate-wrapper {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .cert-card {
+                width: 100%;
+                height: 160px;
+            }
+        }
 
 
 
@@ -832,107 +867,107 @@ nav a:hover::after {
 
 
 
-       @media (max-width: 756px) {
-  main {
-    padding: 2rem 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+        @media (max-width: 756px) {
+            main {
+                padding: 2rem 1rem;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
 
-  .profile-img img {
-    width: 150px;
-    height: 150px;
-  }
+            .profile-img img {
+                width: 150px;
+                height: 150px;
+            }
 
-  .resume-container {
-    max-width: 100%;
-    padding: 20px;
-  }
+            .resume-container {
+                max-width: 100%;
+                padding: 20px;
+            }
 
-  .footer-content p {
-    font-size: 0.9rem;
-  }
+            .footer-content p {
+                font-size: 0.9rem;
+            }
 
-  .footer::before {
-    width: 40px;
-  }
-}
-.timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 0 20px;
-  }
+            .footer::before {
+                width: 40px;
+            }
+        }
 
-  /* The vertical line */
-  .timeline::after {
-    content: '';
-    position: absolute;
-    left: 20px;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background-color: #007BFF;
-    border-radius: 2px;
-  }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
 
-  .timeline-item {
-    position: relative;
-    margin-left: 60px;
-    margin-bottom: 50px;
-  }
+        /* The vertical line */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #007BFF;
+            border-radius: 2px;
+        }
 
-  /* Circle for each timeline event */
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -40px;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border: 4px solid #007BFF;
-    border-radius: 50%;
-  }
+        .timeline-item {
+            position: relative;
+            margin-left: 60px;
+            margin-bottom: 50px;
+        }
 
-  .timeline-item h3 {
-    margin: 0;
-    font-size: 1.3rem;
-    color: black;
-    ;
-  }
+        /* Circle for each timeline event */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border: 4px solid #007BFF;
+            border-radius: 50%;
+        }
 
-  .timeline-item span {
-    font-size: 0.95rem;
-    color: #555;
-  }
+        .timeline-item h3 {
+            margin: 0;
+            font-size: 1.3rem;
+            color: black;
+            ;
+        }
 
-  .timeline-item p {
-    margin: 5px 0 0;
-    color: var(--accent);
-  }
+        .timeline-item span {
+            font-size: 0.95rem;
+            color: #555;
+        }
 
-  /* Responsive for small screens */
-  @media (max-width: 600px) {
-    .timeline {
-      padding-left: 10px;
-    }
+        .timeline-item p {
+            margin: 5px 0 0;
+            color: var(--accent);
+        }
 
-    .timeline::after {
-      left: 10px;
-    }
+        /* Responsive for small screens */
+        @media (max-width: 600px) {
+            .timeline {
+                padding-left: 10px;
+            }
 
-    .timeline-item {
-      margin-left: 40px;
-    }
+            .timeline::after {
+                left: 10px;
+            }
 
-    .timeline-item::before {
-      left: -30px;
-      width: 16px;
-      height: 16px;
-      border-width: 3px;
-    }
-  }
+            .timeline-item {
+                margin-left: 40px;
+            }
 
+            .timeline-item::before {
+                left: -30px;
+                width: 16px;
+                height: 16px;
+                border-width: 3px;
+            }
+        }
     </style>
 </head>
 
@@ -949,11 +984,11 @@ nav a:hover::after {
 
     <main id="Home">
         <div class="intro-text">
-            <h1 style = "font-size: 2rem ;">Gayathiri R </h1>
+            <h1 style="font-size: 2rem ;">Gayathiri R </h1>
             <p style="font-size: 1.3rem;">
-             
-Heyyyy Hii, I'm <strong>Gayuuu</strong><br>
-From Chennai , An Entry-Level Java Developer building modern, responsive web applications.
+
+                Heyyyy Hii, I'm <strong>Gayuuu</strong><br>
+                From Chennai , An Entry-Level Java Developer building modern, responsive web applications.
 
             </p>
         </div>
@@ -965,278 +1000,295 @@ From Chennai , An Entry-Level Java Developer building modern, responsive web app
         <div class="container">
             <h2 class="section-title" style="font-size: 2rem ;">About Me</h2>
             <p class="about-text" style="font-size: 1.3rem ;">
-               <div style="padding: 40px 20px; background-color: #fdfdfd; color: #333; font-family: Arial, sans-serif; max-width: 800px; margin: auto; border-radius: 10px;">
-               <div 
-    style="
-        background-color: #fdfdfd; 
-        color: #333; 
-        font-family: Arial, sans-serif; 
-        max-width: 800px; 
-        margin: 40px auto; 
-        padding: 30px 25px; 
-        border-radius: 15px; 
-        box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: pointer;
-    " 
-    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.15)';" 
-    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.1)';"
->
-  <p style="font-size: 1.1rem; line-height: 1.6; color: #333; margin-bottom: 20px;">
-    I am a passionate <strong style="color:#ff6b81;">Entry-Level Java Developer</strong> with a strong foundation in Java, Spring Boot, and JDBC.<br>
-    I enjoy creating efficient, responsive, and user-friendly web applications, and I am eager to apply my skills in real-world projects.
-  </p>
+            <div
+                style="padding: 40px 20px; background-color: #fdfdfd; color: #333; font-family: Arial, sans-serif; max-width: 800px; margin: auto; border-radius: 10px;">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <p style="font-size: 1.1rem; line-height: 1.6; color: #333; margin-bottom: 20px;">
+                        I am a passionate <strong style="color:#ff6b81;">Entry-Level Java Developer</strong> with a
+                        strong foundation in Java, Spring Boot, and JDBC.<br>
+                        I enjoy creating efficient, responsive, and user-friendly web applications, and I am eager to
+                        apply my skills in real-world projects.
+                    </p>
 
-  <p style="font-size: 1.1rem; line-height: 1.6; color: #333;">
-    When I'm not coding, I love exploring new technologies, contributing to open-source projects, and enhancing my skills in full-stack development.<br>
-    I'm excited to connect with like-minded professionals and contribute to innovative projects.
-  </p>
-</div>
+                    <p style="font-size: 1.1rem; line-height: 1.6; color: #333;">
+                        When I'm not coding, I love exploring new technologies, contributing to open-source projects,
+                        and enhancing my skills in full-stack development.<br>
+                        I'm excited to connect with like-minded professionals and contribute to innovative projects.
+                    </p>
+                </div>
 
-  
 
-</div>
+
+            </div>
             </p>
         </div>
     </section>
     <section>
-                    <h2 class="section-title"style="font-size: 2rem ;">Education</h2>
-    <div class="timeline">
-  <div class="timeline-item">
-    <h3 style="font-size: 1.3rem ;">HSLC - Daniel Matriculation Higher Secondary School</h3>
-    <span>2021 - 2022</span>
-    <p>High School </p>
-  </div>
+        <h2 class="section-title" style="font-size: 2rem ;">Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3 style="font-size: 1.3rem ;">HSLC - Daniel Matriculation Higher Secondary School</h3>
+                <span>2021 - 2022</span>
+                <p>High School </p>
+            </div>
 
-  <div class="timeline-item">
-    <h3 style="font-size: 1.3rem ;">BCA - Dr. MGR Educational and Research Institute</h3>
-    <span>2022 - 2025</span>
-    <p>Bachelor of Computer Application</p>
-  </div>
+            <div class="timeline-item">
+                <h3 style="font-size: 1.3rem ;">BCA - Dr. MGR Educational and Research Institute</h3>
+                <span>2022 - 2025</span>
+                <p>Bachelor of Computer Application</p>
+            </div>
 
-  <div class="timeline-item">
-    <h3 style="font-size: 1.3rem ;">MCA - Anna University </h3>
-    <span>2025 - 2027</span>
-    <p>Master of Computer Application</p>
-  </div>
-</div>
-</section>
+            <div class="timeline-item">
+                <h3 style="font-size: 1.3rem ;">MCA - Anna University </h3>
+                <span>2025 - 2027</span>
+                <p>Master of Computer Application</p>
+            </div>
+        </div>
+    </section>
     <section id="resume" style="padding: 40px 20px; text-align: center; font-family: Arial, sans-serif;">
-                            <h2 class="section-title"style="font-size: 2rem ;">Resume</h2>
+        <h2 class="section-title" style="font-size: 2rem ;">Resume</h2>
 
-    <p style="font-size: 1.1rem; color: #333; margin-bottom: 30px;">
-Discover my skills and experience — click below to view my resume.    </p>
+        <p style="font-size: 1.1rem; color: #333; margin-bottom: 30px;">
+            Discover my skills and experience — click below to view my resume. </p>
 
-    <a href="GAYU.R.pdf" target="_blank" 
-       style="padding: 12px 25px; background-color: #ff6b81; color: #fff; border-radius: 8px; 
+        <a href="GAYU.R.pdf" target="_blank" style="padding: 12px 25px; background-color: #ff6b81; color: #fff; border-radius: 8px; 
               text-decoration: none; font-weight: bold; transition: background 0.3s, transform 0.3s;"
-       onmouseover="this.style.backgroundColor='#e0556e'; this.style.transform='scale(1.05)';"
-       onmouseout="this.style.backgroundColor='#ff6b81'; this.style.transform='scale(1)';">
-        Click to View My Resume
-    </a>
-</section>
-<section id="skills">
-                    <h2 class="section-title"style="font-size: 2rem ;">Tech - Skills </h2>
-    <div class="skills-container">
-        <span class="skill-tag"><i class="devicon-html5-plain colored"></i> HTML</span>
-        <span class="skill-tag"><i class="devicon-css3-plain colored"></i> CSS</span>
-        <span class="skill-tag"><i class="devicon-tailwindcss-original colored"></i> Tailwind</span>
-        <span class="skill-tag"><i class="devicon-react-original colored"></i> React.js</span>
+            onmouseover="this.style.backgroundColor='#e0556e'; this.style.transform='scale(1.05)';"
+            onmouseout="this.style.backgroundColor='#ff6b81'; this.style.transform='scale(1)';">
+            Click to View My Resume
+        </a>
+    </section>
+    <section id="skills">
+        <h2 class="section-title" style="font-size: 2rem ;">Tech - Skills </h2>
+        <div class="skills-container">
+            <span class="skill-tag"><i class="devicon-html5-plain colored"></i> HTML</span>
+            <span class="skill-tag"><i class="devicon-css3-plain colored"></i> CSS</span>
+            <span class="skill-tag"><i class="devicon-tailwindcss-original colored"></i> Tailwind</span>
+            <span class="skill-tag"><i class="devicon-react-original colored"></i> React.js</span>
 
-        <span class="skill-tag"><i class="devicon-java-plain colored"></i> Java</span>
-        <span class="skill-tag"><i class="devicon-spring-plain colored"></i> Spring Boot</span>
-        <span class="skill-tag"><i class="devicon-nodejs-plain colored"></i> REST APIs</span>
-        <span class="skill-tag"><i class="devicon-java-plain colored"></i> JDBC</span>
+            <span class="skill-tag"><i class="devicon-java-plain colored"></i> Java</span>
+            <span class="skill-tag"><i class="devicon-spring-plain colored"></i> Spring Boot</span>
+            <span class="skill-tag"><i class="devicon-nodejs-plain colored"></i> REST APIs</span>
+            <span class="skill-tag"><i class="devicon-java-plain colored"></i> JDBC</span>
 
-        <span class="skill-tag"><i class="devicon-mysql-plain colored"></i> MySQL</span>
-        <span class="skill-tag"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
-        <span class="skill-tag"><i class="devicon-git-plain colored"></i> Git</span>
-        <span class="skill-tag"><i class="devicon-github-original"></i> GitHub</span>
+            <span class="skill-tag"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+            <span class="skill-tag"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+            <span class="skill-tag"><i class="devicon-git-plain colored"></i> Git</span>
+            <span class="skill-tag"><i class="devicon-github-original"></i> GitHub</span>
 
-    </div>
-</section>
-<section id="projects" style="padding: 40px; background: #f9f9f9;">
-  <div style="text-align: center; margin-bottom: 40px;">
-                    <h2 class="section-title"style="font-size: 2rem ;">Projects</h2>
-    <p>Here are some of the projects I’ve worked on recently.</p>
-  </div>
+        </div>
+    </section>
+    <section id="projects" style="padding: 40px; background: #f9f9f9;">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2 class="section-title" style="font-size: 2rem ;">Projects</h2>
+            <p>Here are some of the projects I’ve worked on recently.</p>
+        </div>
 
-  <div style="position: relative; overflow: hidden; max-width: 900px; margin: auto;">
+        <div style="position: relative; overflow: hidden; max-width: 900px; margin: auto;">
+
     <!-- Carousel Wrapper -->
     <div id="carousel" style="display: flex; transition: transform 0.5s ease;">
-      <!-- Project 1 -->
-      <div class="project-card" style="min-width: 300px; margin: 0 10px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <img src="jalapeno.png" alt="Project 1" style="width: 100%; border-radius: 10px 10px 0 0;">
-        <div style="padding: 15px;">
-          <h3 style="color: #333 ;">Jalapeño</h3>
-          <p style="color: #333 ;"><strong>Tech Stack: MERN Stack, Stripe Api</strong></p>
-          <p style="color: #333 ;">
-            Recipe Book Module – Empowers women by showcasing their home-cooked recipes.<br>
-            Leftover Food Redistribution – Connects Canteen/restaurants with NGOs to donate excess food, reducing waste and helping the needy.
-          </p>
+
+        <!-- Project 1 -->
+        <div class="project-card"
+            style="min-width: 300px; margin: 0 10px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+
+            <img src="jalapeno.png" alt="Project 1"
+                style="width: 100%; border-radius: 10px 10px 0 0;">
+
+            <div style="padding: 15px;">
+                <h3 style="color: #333;">Jalapeño - Smart Food Delivery Application </h3>
+                <p style="color: #333;"><strong>Tech Stack: MERN Stack, Stripe API</strong></p>
+                <p style="color: #333;">
+                    Recipe Book Module – Empowers women by showcasing their home-cooked recipes.<br>
+                    Leftover Food Redistribution – Connects restaurants with NGOs to donate excess food.
+                </p>
+            </div>
         </div>
-      </div>
 
-      <!-- Project 2 -->
-      <a href="https://india-destination.vercel.app/" target="_blank" class="project-card" style="min-width: 300px; margin: 0 10px; background: white; text-decoration: none; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <img src="india-destinationplaces.png" alt="Project 2" style="width: 100%; border-radius: 10px 10px 0 0;">
-        <div style="padding: 15px; ">
-          <h3 style="color: #333 ;">India-TouristPlanner</h3>
-          <p style="color: #333 ;"><strong>Tech Stack: HTML, CSS, JavaScript</strong></p>
-          <p style="color: #333 ;">
-            A responsive and interactive tourism planner website built using HTML, CSS, and JavaScript.<br>
-            It helps users explore top destinations in India with descriptions, images, and booking options.
-          </p>
+        <!-- Project 2 -->
+        <div class="project-card"
+            style="min-width: 300px; margin: 0 10px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+
+            <img src="india-destinationplaces.png" alt="Project 2"
+                style="width: 100%; border-radius: 10px 10px 0 0;">
+
+            <a href="https://india-destination.vercel.app/" target="_blank" style="text-decoration: none; color: inherit;">
+                <div style="padding: 15px;">
+                    <h3 style="color: #333;">Book Your Tourist Destination India</h3>
+                    <p style="color: #333;"><strong>Tech Stack: HTML, CSS, JavaScript</strong></p>
+                    <p style="color: #333;">
+                        A responsive and interactive tourism planner website with destination details,
+                        images, and booking options.
+                    </p>
+                </div>
+            </a>
+
+        </div> 
+                <!-- Project 3 -->
+                <div class="project-card"
+                    style="min-width: 300px; margin: 0 10px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <img src="SMS.png" alt="Project 3" style="width: 100%; border-radius: 10px 10px 0 0;">
+                    <a href="https://github.com/Gayathri575/DSA_JAVA/tree/main/src/MiniProject" target="_blank"
+                        class="project-card"
+                        style="min-width: 300px; margin: 0 10px; background: white; text-decoration: none; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+
+                        <div style="padding: 15px;">
+                            <h3 style="color: #333 ;">Student Management System</h3>
+                            <p style="color: #333 ;"><strong> Tech Stack: Java, OOP, ArrayList</strong></p>
+                            <p style="color: #333 ;">
+                                A console-based mini project that allows users to store and view student details (Name,
+                                Roll No, Phone Number). Implemented using OOP principles, ArrayList for data storage,
+                                and scanner for user input.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="project-card"
+                    style="min-width: 300px; margin: 0 10px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <img src="BMS.png" alt="Project 3" style="width: 100%; border-radius: 10px 10px 0 0;">
+                    <a href="https://github.com/Gayathri575/DSA_JAVA/tree/main/src/MiniProject" target="_blank"
+                        class="project-card"
+                        style="min-width: 300px; margin: 0 10px; background: white; text-decoration: none; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+
+                        <div style="padding: 15px;">
+                            <h3 style="color: #333 ;">Banking Management System</h3>
+                            <p style="color: #333 ;"><strong> Tech Stack: Java, OOP, ArrayList</strong></p>
+                            <p style="color: #333 ;">
+                                A console-based mini project that allows users to store and view student details (Name,
+                                Roll No, Phone Number). Implemented using OOP principles, ArrayList for data storage,
+                                and scanner for user input.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="project-card"
+                    style="min-width: 300px; margin: 0 10px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <img src="kaapi.png" alt="Project 3" style="width: 100%; border-radius: 10px 10px 0 0;">
+                    <a href="https://kaapikadhaigal.vercel.app" target="_blank"
+                        class="project-card"
+                        style="min-width: 300px; margin: 0 10px; background: white; text-decoration: none; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+
+                        <div style="padding: 15px;">
+                            <h3 style="color: #333 ;">Kaapi Kadhaigal</h3>
+                            <p style="color: #333 ;"><strong> Tech Stack: HTML, CSS</strong></p>
+                            <p style="color: #333 ;">
+                                A responsive and interactive website built using HTML and CSS. It showcases a collection of
+                            layout
+                            designs for a coffee shop, with a focus on user experience and visual appeal.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Left & Right Arrows -->
+            <button onclick="slide(-1)"
+                style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer;">&#10094;</button>
+            <button onclick="slide(1)"
+                style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer;">&#10095;</button>
         </div>
-      </a>
+    </section>
 
-      <!-- Project 3 -->
-      <div class="project-card" style="min-width: 300px; margin: 0 10px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <img src="SMS.png" alt="Project 3" style="width: 100%; border-radius: 10px 10px 0 0;">
-              <a href="https://github.com/Gayathri575/DSA_JAVA/tree/main/src/MiniProject" target="_blank" class="project-card" style="min-width: 300px; margin: 0 10px; background: white; text-decoration: none; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <script>
+        let index = 0;
+        const carousel = document.getElementById('carousel');
+        const cards = document.querySelectorAll('.project-card');
 
-        <div style="padding: 15px;">
-          <h3 style="color: #333 ;">Student Management System</h3>
-          <p style="color: #333 ;"><strong>  Tech Stack: Java, OOP, ArrayList</strong></p>
-          <p style="color: #333 ;">
-A console-based mini project that allows users to store and view student details (Name, Roll No, Phone Number). Implemented using OOP principles, ArrayList for data storage, and scanner for user input.
-          </p>
+        // Dynamically calculate card width (includes margin)
+        function getCardWidth() {
+            return cards[0].offsetWidth + 20;
+        }
+
+        // Dynamically calculate how many cards visible per screen
+        function getVisibleCards() {
+            const screenWidth = window.innerWidth;
+
+            if (screenWidth <= 480) return 1;      // mobile
+            if (screenWidth <= 768) return 2;      // small tablet
+            if (screenWidth <= 1024) return 3;     // tablet
+            return 3;                              // laptop/desktop
+        }
+
+        function slide(direction) {
+            index += direction;
+
+            const visible = getVisibleCards();
+            const maxIndex = cards.length - visible;
+
+            if (index < 0) index = 0;
+            if (index > maxIndex) index = maxIndex;
+
+            carousel.style.transform = `translateX(${-index * getCardWidth()}px)`;
+        }
+
+        // Recalculate on screen resize
+        window.addEventListener("resize", () => {
+            index = 0;
+            carousel.style.transform = "translateX(0px)";
+        });
+    </script>
+
+    <section id="certificates">
+        <h2 class="section-title" style="font-size: 2rem ; color : #007BFF;">Certificates</h2>
+
+        <div class="certificate-wrapper">
+
+            <!-- 1 -->
+            <div class="cert-card">
+                <div class="cert-inner">
+                    <div class="cert-front">
+                        <h5 style="color: #333 ;">Python Programming <br> (Udemy)</h5>
+                    </div>
+                    <div class="cert-back">
+                        <a href="Udemy-Python.pdf" target="_blank" class="btn">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="cert-card">
+                <div class="cert-inner">
+                    <div class="cert-front">
+                        <h5 style="color: #333 ;">Responsive Web Design <br> (freeCodeCamp)</h5>
+                    </div>
+                    <div class="cert-back">
+                        <a href="Responsive_freeCodecamp.pdf" target="_blank" class="btn">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="cert-card">
+                <div class="cert-inner">
+                    <div class="cert-front">
+                        <h5 style="color: #333 ;">Java Backend <br> (Geeks for Geeks)</h5>
+                    </div>
+                    <div class="cert-back">
+                        <a href="java-Backend-bootcamp.pdf" target="_blank" class="btn">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="cert-card">
+                <div class="cert-inner">
+                    <div class="cert-front">
+                        <h5 style="color: #333 ;">DSA <br> (Geeks for Geeks)</h5>
+                    </div>
+                    <div class="cert-back">
+                        <a href="DSA_Bootcamp.pdf" target="_blank" class="btn">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
-                </a>
-      </div>
-      <div class="project-card" style="min-width: 300px; margin: 0 10px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <img src="BMS.png" alt="Project 3" style="width: 100%; border-radius: 10px 10px 0 0;">
-              <a href="https://github.com/Gayathri575/DSA_JAVA/tree/main/src/MiniProject" target="_blank" class="project-card" style="min-width: 300px; margin: 0 10px; background: white; text-decoration: none; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    </section>
 
-        <div style="padding: 15px;">
-          <h3 style="color: #333 ;">Banking Management System</h3>
-          <p style="color: #333 ;"><strong>  Tech Stack: Java, OOP, ArrayList</strong></p>
-          <p style="color: #333 ;">
-A console-based mini project that allows users to store and view student details (Name, Roll No, Phone Number). Implemented using OOP principles, ArrayList for data storage, and scanner for user input.
-          </p>
-        </div>
-                </a>
-      </div>
 
-      <!-- Project 4 -->
-      <a href="https://kaapikadhaigal.vercel.app/" target="_blank" class="project-card" style="min-width: 300px; margin: 0 10px; background: white; text-decoration: none; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <img src="kaapi.png" alt="Project 4" style="width: 100%; border-radius: 10px 10px 0 0;">
-        <div style="padding: 15px; ">
-          <h3 style="color: #333 ;">Kaapi-Kadhaigal</h3>
-          <p><strong style="color: #333 ;">Tech Stack: HTML, CSS</strong></p>
-          <p style="color: #333 ;">
-            A responsive and interactive website built using HTML and CSS. It showcases a collection of layout
-            designs for a coffee shop, with a focus on user experience and visual appeal.
-          </p>
-        </div>
-      </a>
-    </div>
-
-    <!-- Left & Right Arrows -->
-    <button onclick="slide(-1)" style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer;">&#10094;</button>
-    <button onclick="slide(1)" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer;">&#10095;</button>
-  </div>
-</section>
-
-<script>
-let index = 0;
-const carousel = document.getElementById('carousel');
-const cards = document.querySelectorAll('.project-card');
-
-// Dynamically calculate card width (includes margin)
-function getCardWidth() {
-  return cards[0].offsetWidth + 20; 
-}
-
-// Dynamically calculate how many cards visible per screen
-function getVisibleCards() {
-  const screenWidth = window.innerWidth;
-
-  if (screenWidth <= 480) return 1;      // mobile
-  if (screenWidth <= 768) return 2;      // small tablet
-  if (screenWidth <= 1024) return 3;     // tablet
-  return 3;                              // laptop/desktop
-}
-
-function slide(direction) {
-  index += direction;
-
-  const visible = getVisibleCards();
-  const maxIndex = cards.length - visible;
-
-  if (index < 0) index = 0;
-  if (index > maxIndex) index = maxIndex;
-
-  carousel.style.transform = `translateX(${-index * getCardWidth()}px)`;
-}
-
-// Recalculate on screen resize
-window.addEventListener("resize", () => {
-  index = 0;
-  carousel.style.transform = "translateX(0px)";
-});
-</script>
-
-<section id="certificates">
-                    <h2 class="section-title"style="font-size: 2rem ; color : #007BFF;">Certificates</h2>
-
-  <div class="certificate-wrapper">
-
-    <!-- 1 -->
-    <div class="cert-card">
-      <div class="cert-inner">
-        <div class="cert-front">
-          <h5 style="color: #333 ;">Python Programming <br> (Udemy)</h5>
-        </div>
-        <div class="cert-back">
-          <a href="Udemy-Python.pdf" target="_blank" class="btn">View Certificate</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2 -->
-    <div class="cert-card">
-      <div class="cert-inner">
-        <div class="cert-front">
-          <h5 style="color: #333 ;">Responsive Web Design <br> (freeCodeCamp)</h5>
-        </div>
-        <div class="cert-back">
-          <a href="Responsive_freeCodecamp.pdf" target="_blank" class="btn">View Certificate</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 3 -->
-    <div class="cert-card">
-      <div class="cert-inner">
-        <div class="cert-front">
-          <h5 style="color: #333 ;">Java Backend <br> (Geeks for Geeks)</h5>
-        </div>
-        <div class="cert-back">
-          <a href="java-Backend-bootcamp.pdf" target="_blank" class="btn">View Certificate</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 4 -->
-    <div class="cert-card">
-      <div class="cert-inner">
-        <div class="cert-front">
-          <h5 style="color: #333 ;">DSA <br> (Geeks for Geeks)</h5>
-        </div>
-        <div class="cert-back">
-          <a href="DSA_Bootcamp.pdf" target="_blank" class="btn">View Certificate</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-    
     <section id="contact" class="contact-section">
         <div class="section-title">
-                    <h2 class="section-title">Social Links</h2>
+            <h2 class="section-title">Social Links</h2>
             <p>Let’s collaborate and stay connected.</p>
         </div>
         <div class="social-links">
@@ -1249,13 +1301,13 @@ window.addEventListener("resize", () => {
             <a href="mailto:gayathriii575@gmail.com" target="_blank" aria-label="Email">
                 <i class="fas fa-envelope"></i>
             </a>
-</a>
+            </a>
         </div>
         </div>
-    </div>
+        </div>
     </section>
 
- 
+
     <footer class="footer">
         <div class="footer-content">
             <p>&copy; 2025 <span>Gayathiri</span>. All rights reserved.</p>
